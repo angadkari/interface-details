@@ -1,0 +1,39 @@
+from random import randint
+name = input ('please enter your name ')
+Newgame = input('New game[yes/no]:')
+player = "yes"
+if (Newgame == "yes" and name != ""):
+    while player == "yes":
+        t = ["ROCK", "PAPER", "SCISSOR"]
+        print ( t[0] +" "+t[1]+" "+ t[2] + '\n' + 'select from the give options' + name)
+        player = (input("Rock, Paper, Scissors?")).upper()
+        computer = t[randint(0, 2)]
+        print("The computer chose: " + computer)
+        if player == computer:
+            print("Game is a DRAW!")
+        elif (player == "ROCK"):
+            if computer == "PAPER":
+                print("Computer wins...Better Luck Next Time" + name)
+            else:
+                print(name + " wins!")
+        elif (player == "PAPER"):
+            if computer == "SCISSOR":
+                print("Computer wins...Better Luck Next Time" + name)
+            else:
+                print(name + " wins!")
+        elif (player == "SCISSOR" ):
+            if computer == "ROCK":
+                print("Computer wins...Better Luck Next Time")
+            else:
+                print(name + " wins!")
+        else:
+            print("That's not a valid play"+ name + "Check your spelling!")
+
+        player = input("do you want to continue" + name +  "?[yes/no]")
+
+        player == "yes"
+
+    print("Good Bye " + name + "!")
+else:
+    print("Good Bye "+ name + "!!" )
+    exit()

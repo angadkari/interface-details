@@ -1,0 +1,5 @@
+vlan 2
+exit
+int range gigabitEthernet 0/0-2
+switchport mode trunk
+switchport trunk encapsulation dot1q
